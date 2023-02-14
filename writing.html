@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+    <style>
+    </style>
+</head>
+
+<body>
+    <div class="sidenav">
+        <a href="index.html">Home</a>
+        <a href="news">News</a>
+        <a class="active_site" href="writing.html">Writing</a>
+        <a href="random">Random</a>
+        <a href="about">About</a>
+    </div>
+
+    <form>
+        <input type="text" name="search" placeholder="soon!">
+    </form>
+
+
+    <div class="main">
+        <h1>Writing</h1>
+        <p> Work in progress..</p>
+        <p class="mono-font">Here you will be able to find many different works of writing by friends and
+            myself. As the topics and text-types vary greatly, you're free to navigate using
+            the Search-Function and Filters.
+        </p>
+        <div id="testBtnContainer">
+            <button class="filterbtn active" onclick="filterBy('all')">Show all</button>
+            <button class="filterbtn" onclick="filterBy('authorJB')">Author: Jannis Busch</button>
+            <button class="filterbtn" onclick="filterBy('authorPB')">Author: Paul Busch</button>
+        </div>
+        <div class="leftcolumn">
+            <div class="filterCard authorJB">
+                <h2><a href="LoveofmyLife.html">Love of my Life</a></h2>
+                <h5>By Jannis Busch   Jan 31, 2021</h5>
+                <div class="fakeimg" style="height:200px">image placeholder</div>
+                <p>Text...</p>
+            </div>
+            <div class="filterCard authorJB">
+                <h2><a href="Cheese.html">Cheese</a></h2>
+                <h5>By Jannis Busch   Feb 21, 2021</h5>
+                <div class="fakeimg" style="height:200px">image placeholder</div>
+                <p>Text...</p>
+            </div>
+            <div class="filterCard authorJB">
+                <h2><a href="Weekends.html">Weekends</a></h2>
+                <h5>By Jannis Busch   Jan 7, 2022</h5>
+                <div class="fakeimg" style="height:200px">image placeholder</div>
+                <p>Text...</p>
+            </div>
+            <div class="filterCard authorPB">
+                <h2><a href="">filterBy test</a></h2>
+                <h5>By Paul Busch   Jan 7, 2022</h5>
+                <div class="fakeimg" style="height:200px">image placeholder</div>
+                <p>Text...</p>
+            </div>
+            <div class="filterCard authorPB">
+                <h2><a href="">Why not now?</a></h2>
+                <h5>By Paul Busch   Jan 7, 2022</h5>
+                <div class="fakeimg" style="height:200px">image placeholder</div>
+                <p>Text...</p>
+            </div>
+            <div class="filterCard authorPB authorJB">
+                <h2><a href="">filterBy Test with 2 authors</a></h2>
+                <h5>By Jannis and Paul Busch   Jan 7, 2022</h5>
+                <div class="fakeimg" style="height:200px">image placeholder</div>
+                <p>Text...</p>
+            </div>
+
+        </div>
+        <div class="rightcolumn">
+            <div class="card">
+                <h2>Newest Releases</h2>
+                <div class="fakeimg" style="height:50px">image placeholder</div>
+                <p>TBD</p>
+                <div class="fakeimg" style="height:50px">image placeholder</div>
+                <p>TBD</p>
+            </div>
+            <div class="card">
+                <h2>Popular Releases</h2>
+                <div class="fakeimg" style="height:50px">image placeholder</div>
+                <div class="fakeimg" style="height:50px">image placeholder</div>
+                <p>TBD</p>
+            </div>
+            <div class="card">
+                <h2>Follow Us</h2>
+                <p>TBD</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>Footer</h2>
+    </div>
+
+</body>
+</html>

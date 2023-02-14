@@ -1,0 +1,241 @@
+/*Global */
+@font-face {
+    font-family: VCROSDMono;
+    font-style: normal;
+    font-weight: 00;
+    src: url("fonts/VCR_OSD_MONO_1.001.ttf");
+}
+
+html {
+    font-size: 14px;
+    height: 100%;
+}
+body {
+    font-family: Helvetica,Arial,sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    background-color: #fff;
+    margin: 0;
+    overflow-y: scroll;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.center_nav li, .sidenav, input {
+    text-transform: uppercase;
+    font-family: VCROSDMono;
+    color: #ababab;
+}
+h1, h2, h5 {
+    text-transform: uppercase;
+    font-family: VCROSDMono;
+}
+
+
+/*button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    letter-spacing: inherit;
+    padding: 0;
+    text-align: inherit;
+    text-transform: inherit;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    touch-action: manipulation;
+    padding: 22px 14px 10px;
+} */
+
+/* Globale Sidenavbar: */
+.sidenav {
+    font-size: 15px;
+    width: 180px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background-color: rgb(245, 245, 245);
+    overflow-x: hidden;
+    padding: 8px 0;
+    border-radius: 4px;
+}
+
+.sidenav a {
+    padding: 6px 26px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    text-decoration: none;
+}
+
+/*Globales Suchfeld: */
+input[type=text] {
+    margin-top: 150px;
+    margin-left: 10px;
+    width: 100px;
+    position: fixed;
+    font-size: 15px;
+    font-family: VCROSDMono;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    background-image: url("/images/search.png");
+    background-position: 4px 6px;
+    background-repeat: no-repeat;
+    padding: 12px 10px 12px 30px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 180px;
+    text-align: center;
+}
+
+/*Main entsprechend positionieren*/
+.main {
+    margin-left: 200px;
+    margin-top: 30px;
+    padding: 0px 10px;
+}
+.main h1 {
+    text-align: center;
+}
+/* Einteilung in 2 columns*/
+.leftcolumn {
+    float: left;
+    width: 74%;
+}
+.rightcolumn {
+    float: right;
+    width: 24%;
+    padding-left: 10px;
+}
+
+/* Artikel-Card */
+.filterCard, .card {
+background-color: rgb(245, 245, 245);
+padding: 10px 20px;
+margin-top: 20px;
+border-radius: 8px;
+}
+        
+.fakeimg {
+    background-color: #aaa;
+    width: auto;
+    padding: 20px;
+    margin-top: 10px;
+    }
+/* Nach den Columns float auflösen */
+.main:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Footer */
+.footer {
+    padding: 20px;
+    background-color: #aaa;
+    margin: 20px;
+    margin-left: 200px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* anpassbares layout wenn weniger als 800px weit*/
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+        width: 100%;
+        padding: 0%;
+    }            
+}
+
+
+/*Nur für Index/Home */
+/* Zentrierte Navbar: */
+.center_nav {
+    font-size: 15px;
+    width: 100%;
+    height: 100%;
+}
+    .center_nav ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .center_nav li {
+        list-style: none;
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+        align-items: center;
+        padding: 8px 26px;
+    }
+    /* Interaktive Links in Navbar */
+    .center_nav a, .sidenav a {
+        color: inherit;
+        background-image: linear-gradient(#ababab, #ababab);
+        background-size: 0% 0.1em;
+        background-position-y: 100%;
+        background-position-x: 50%;
+        background-repeat: no-repeat;
+        transition: background-size 0.2s ease-in-out;
+        text-decoration: none;
+    }
+
+    .center_nav a:hover:not(.active_site), h2 a:hover {
+        background-size: 100% 0.1em;
+    }
+
+    .sidenav a:hover:not(.active_site) {
+        background-size: 35% 0.1em;
+    }
+
+    /*aktive seite schwarz unterstrichen*/
+    .center_nav a.active_site, .sidenav a.active_site {
+        color: black;
+        text-decoration: underline;
+    }
+     /* Interaktive Artikel Header-Links */
+    h2 a {
+        color: inherit;
+        background-image: linear-gradient(black , black);
+        background-size: 0% 0.1em;
+        background-position-y: 100%;
+        background-position-x: 50%;
+        background-repeat: no-repeat;
+        transition: background-size 0.2s ease-in-out;
+        text-decoration: none;
+    }
+
+/* Filter Buttons */
+
+.filterbtn {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    background-color: rgb(245, 245, 245);
+    cursor: pointer;
+    padding: 12px;
+}
+.filterbtn:hover {
+    background-color: #ccc;
+}
+.filterbtn.active {
+    background-color: #aaa;
+    color: white;
+}
+
+.filterCard { 
+float: left;
+display: none; /*filtercards standardmäßig versteckt*/  
+}
+.show {
+    display: block;
+}

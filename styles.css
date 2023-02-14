@@ -233,7 +233,6 @@ border-radius: 8px;
 }
 
 .filterCard { 
-float: left;
 display: none; /*filtercards standardmäßig versteckt HIER IST DAS PROBLEM!*/  
 }
 .show {
